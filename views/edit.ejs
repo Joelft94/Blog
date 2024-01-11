@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="/update/<%=post.id%>" method="POST">
+            <label>New Title:</label>
+            <input required placeholder="Title" type="text" name="title" id="title" value="<%= post.title %>">
+            <label for="title">New Content:</label>
+            <input required placeholder="Content" type="text" name="content" id="content" value="<%= post.content%>"><br>
+            <a href="/" class="btn btn-secondary mt-2">Cancel</a>
+            <button type="submit" class="btn btn-primary mt-2" > Update Post</button>
+        </form>
+    </div>
+</body>
+</html>

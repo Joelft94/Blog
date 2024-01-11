@@ -1,0 +1,9 @@
+body {
+    background: rgb(1, 181, 234);
+    background: linear-gradient(90deg, rgba(1, 181, 234, 1) 24%, rgba(14, 108, 245, 1) 73%);
+}
+
+.header {
+    background: rgb(1,206,234);
+    background: radial-gradient(circle, rgba(1,206,234,1) 32%, rgba(14,27,245,0.7266050707392332) 82%);
+}

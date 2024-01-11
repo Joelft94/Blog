@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("header.ejs") %>
+<body>
+<div>
+    <form action="/" method="POST">
+        <input required placeholder="Title" type="text" name="title" id="title">
+        <input required placeholder="Content" type="text" name="content" id="content"><br>
+        <input required placeholder="Author" type="text" name="author" id="author" >
+        <a href="/" class="btn btn-secondary mt-2">Cancel</a>
+        <button type="submit" class="btn btn-primary mt-2" > Submit</button>
+    </form>
+</div>
+
+
+
+<div>
+    <% posts.forEach(post => { %>
+        <p><%= post.title %></p>
+        <p><%= post.content %></p>
+        <p><%= post.author %></p>
+        <a href="/edit/<%=post.id%>">Edit</a>
+        <a href="/delete/<%=post.id%>">Delete</a>
+    <% });%>
+</div>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+</html>
